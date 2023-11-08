@@ -23,14 +23,6 @@ Above is slightly wrong
 using namespace std;
 using lt = unsigned long long;
 
-lt large_mod_bad(const vector<lt>& v1, lt mod, lt i = 0)
-{
-    if (i == size(v1) - 1)
-        return v1.back() % mod;
-
-    return (((10 * v1[i]) % mod) + large_mod_bad(v1, mod, i + 1)) % mod;
-}
-
 lt large_mod(const vector<lt>& v1, lt mod)
 {
     lt r = 0;

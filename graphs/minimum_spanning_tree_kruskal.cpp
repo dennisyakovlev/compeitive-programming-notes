@@ -6,7 +6,7 @@ A minimum spanning tree is subgraph from a connected graph G such that
 Kruskal's algorithm finds the MST by
     - sorting all edges in non-decreasing order of weight
     - find the |V|-1 edges from least to greatest
-    - an edge is not added if is already in the current MST
+    - if edges end points not in the current MST, add the endpoints
 
 The issue becomes how to keep track of "current MST"
     - use disjoint set union
