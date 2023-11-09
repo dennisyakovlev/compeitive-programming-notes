@@ -16,7 +16,7 @@ Proof:
 
 */
 
-// graph as adjency list, where pairs are (next vertex, weight)
+// graph as adjency list, where pairs are (weight, next vertex)
 // n is number of verticies
 // sv is start vertex
 void dijkstra(const vector<vector<pair<int,int>>>& adj, int n, int sv)
