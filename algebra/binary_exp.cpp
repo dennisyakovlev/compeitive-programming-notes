@@ -51,10 +51,11 @@ lt bin_expr(lt a, lt n)
 
 int main()
 {
-    cout << bin_expr(3, 1) << endl;
-    cout << bin_expr(3, 2) << endl;
-    cout << bin_expr(3, 3) << endl;
-    cout << bin_expr(3, 4) << endl;
-    cout << bin_expr(3, 7) << endl;
-    cout << bin_expr(2, 10) << endl;
+    cout << bin_exp(0, 5) << endl;
+    cout << bin_exp(3, 1) << endl;
+    cout << bin_exp(3, 2) << endl;
+    cout << bin_exp(3, 3) << endl;
+    cout << bin_exp(3, 4) << endl;
+    cout << bin_exp(3, 7) << endl;
+    cout << bin_exp(2, 10) << endl;
 }
