@@ -1,11 +1,11 @@
 /*
 recursive tree structure with O(lg(n)) operations. the tree cannot add or remove
 elements but can update existing elements
-    build(V, v, sl, sr)
-        V  - array to use
+    build(v, sl, sr, V)
         v  - current vertex number
         sl - current segment left
         sr - current segment right
+        V  - array to use
     update(v, sl, sr, p, nv)
         v  - current vertex number
         sl - current segment left
@@ -32,11 +32,11 @@ using namespace std;
 
 vector<int> T; // has 4*n elements
 
-int build(const vector<int>& V, int v, int sl, int sr)
+int build(int v, int sl, int sr, const vector<int>& V)
 {
     if (sl == sr) return T[v] = V[sl];
     int m = (sl + sr) / 2;
-    return T[v] = build(V, 2*v, sl, m) + build(V, 2*v+1, m+1, sr);
+    return T[v] = build(2*v, sl, m, V) + build(2*v+1, m+1, sr, V);
 }
 
 int update(int v, int sl, int sr, int p, int nv)
@@ -60,7 +60,7 @@ int main(int argc, const char* argv[])
     vector<int> v = {9,-8};
     int n = size(v);
     T.resize(4*n);
-    build(v, 1, 0, n-1);
+    build(1, 0, n-1, v);
     update(1, 0, n-1, 0, 3);
     printf("%d\n", query(1, 0, n-1, 1,1));
 
