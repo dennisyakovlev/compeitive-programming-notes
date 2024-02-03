@@ -1,0 +1,6 @@
+For some number X to be divisible by a_i, 1<=i<=n
+    => lcm(a_i) | X
+
+For some a_i, 1<=i<=n, to be divisible by X
+    => X | gcd(a_i)
+
