@@ -10,20 +10,15 @@ numbers <= sqrt(X).
 using namespace std;
 
 using lt = long long;
-vector<lt> primes;
+vector<bool> primes; // primes[i] = true => is prime
  
 void sieve()
 {
     lt MX=10001; // is sqrt(max_val)
-    vector<bool> seen(MX+1,false);
+    primes.assign(MX+1,true);
     for (lt i=2;i!=MX;++i)
-    {
-        if (!seen[i])
-        {
-            for (lt j=i;j<MX;j+=i) seen[j]=true;
-            primes.push_back(i);
-        }
-    }
+        if (primes[i])
+            for (lt j=2*i;j<MX;j+=i) primes[j]=false;
 }
 
 void solve()
@@ -33,5 +28,5 @@ void solve()
 
 int main()
 {
-
+    sieve();
 }

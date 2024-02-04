@@ -30,9 +30,7 @@ int find_set(int v)
 
 void merge_sets(int v, int u)
 {
-    int a = find_set(v);
-    int b = find_set(u);
-
+    auto [a,b] = make_pair(find_set(v), find_set(u));
     if (a != b)
     {
         if (set_size[a] < set_size[b])
