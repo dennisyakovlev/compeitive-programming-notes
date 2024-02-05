@@ -36,9 +36,9 @@ void dijkstra(const vector<vector<pair<int,int>>>& adj, int n, int sv)
         {
             if (d[v] + w < d[v_new])
             {
-                q.erase({d[v_new], v_new});
+                s1.erase({d[v_new], v_new});
                 d[v_new] = d[v] + w;
-                q.insert({d[v_new], v_new});
+                s1.insert({d[v_new], v_new});
 
                 p[v_new] = v;
             }
