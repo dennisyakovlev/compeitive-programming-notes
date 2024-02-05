@@ -7,6 +7,8 @@ the idea is to maintain a forest of tree roots with three operations
 two optimizations are
     1) for every find, update all traversed nodes to have root as parent
     2) merge the smaller size tree into the larger one
+
+question: https://cses.fi/problemset/result/8383669/
 */
 
 #include <bits/stdc++.h>
