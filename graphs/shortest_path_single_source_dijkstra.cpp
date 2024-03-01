@@ -21,7 +21,7 @@ Proof:
 // sv is start vertex
 void dijkstra(const vector<vector<pair<int,int>>>& adj, int n, int sv)
 {
-    set<pair<int,int>> s1;
+    set<pair<int,int>> s1; // (cost to get to vertex, current vertex)
     vector<int> d(n + 1, INT_MAX - SUM_MAX_WEIGHTS), p(n + 1, -1);
 
     s1.insert({0, sv});

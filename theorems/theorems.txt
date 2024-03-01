@@ -1,0 +1,14 @@
+Dilworths Theorem
+
+    definition - chain - a totally ordered set. usually refers to totally ordered subset of a partial order
+    definition - antichain - set of elements which no two of which are comparable to each other
+    definition - chain decomposition - parition of totally ordered set into disjoint chains
+
+    statement  - for a finite partially ordered set the largest antichain equals smallest chain decomposition
+                    largest antichain     -> means largest set size
+                    smallest chain decomp -> means smallest number of chains for all possible decompositions
+
+    notes      - antichain is a level in the hasse diagram. the largest antichain is the max width of the hasse diagram
+
+    problems   - https://cses.fi/problemset/task/2216    
+

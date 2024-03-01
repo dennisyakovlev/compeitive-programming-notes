@@ -5,7 +5,7 @@ bellman-ford sinle source shortest path with negative weights
     -> positive cycle must be on path from 1 to n
 
 theorem
-    a graph contains to negative cycles iff all relaxations are optimal after |v|-1 iterations
+    a graph contains no negative cycles iff all relaxations are optimal after |v|-1 iterations
 
 proof
     let G be graph with no negative cycles
@@ -41,7 +41,7 @@ using namespace std;
 
 using lt = long long;
 lt n,m,INF=LLONG_MIN/2;
-vector<tuple<lt,lt,lt>> e;
+vector<tuple<lt,lt,lt>> e; // edge = (vertex 1, vertex 2), edge weight 
 vector<vector<lt>> v1,v2;
 vector<lt> s1, s2;
 
